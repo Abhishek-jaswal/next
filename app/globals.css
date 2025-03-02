@@ -16,8 +16,8 @@
   }
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
+body {
+  
   background: linear-gradient(
       to bottom,
       transparent,
@@ -30,4 +30,4 @@
   .text-balance {
     text-wrap: balance;
   }
-} */
+} 

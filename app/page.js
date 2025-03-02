@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-beige-100 p-6">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-1xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <VitalsInput 
           name={name} setName={setName} 
           height={height} setHeight={setHeight} 
@@ -48,8 +48,10 @@ export default function Home() {
           goal={goal} setGoal={setGoal} 
           calculateValues={calculateValues} 
         />
+         <div className="min-h-screen bg-gradient-to-br from-green-50 to-beige-100 p-6">
         <Report name={name} dob={dob} bmi={bmi} bmr={bmr} tdee={tdee} weight={weight} goal={goal} />
         <MealRecommendation tdee={tdee} />
+        </div>
       </div>
     </div>
   );

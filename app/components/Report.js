@@ -2,7 +2,9 @@ import React from "react";
 
 export default function Report({ name, dob, bmi, bmr, tdee, weight, goal }) {
   return (
+   <div id = "flex">
     <div className="bg-white p-6 rounded-lg shadow-lg">
+      <img src="" alt="nice"/>
       <h2 className="text-lg font-bold mb-4">Your Report & Solution</h2>
 
       {bmi && (
@@ -16,6 +18,8 @@ export default function Report({ name, dob, bmi, bmr, tdee, weight, goal }) {
           <p><strong>Goal:</strong> {goal}</p>
         </>
       )}
+    </div>
+    <div className="bg-white p-6 rounded-lg shadow-lg"></div>
     </div>
   );
 }
