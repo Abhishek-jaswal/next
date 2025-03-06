@@ -11,11 +11,13 @@ export default function VitalsInput({
   calculateValues
 }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
-      <h2 className="text-lg font-bold mb-4">Know Your Vitals</h2>
+    <>
+      <h2 className="text-sm  font-bold mb-4">Know Your Vitals in 2 minutes!</h2>
+    <div className="max-w-sm  bg-white p-6 bg-opacity-40 rounded-lg shadow-xl border border-gray-200 ">
+    
 
       {/* Name Input */}
-      <label className="block mb-2">Name:</label>
+      <label className="block mb-1">Name:</label>
       <input
         type="text"
         value={name}
@@ -90,5 +92,6 @@ export default function VitalsInput({
         Check
       </button>
     </div>
+    </>
   );
 }

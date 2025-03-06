@@ -13,16 +13,15 @@
 }
 
 body {
-  
-  background: linear-gradient(
-      to bottom right,
-      #14BD6B,#F1E4AB,#FFCC00
-    );
-      
-  
+  background: linear-gradient(164deg, #14BD6B 0%,#F1E4AB 44%, #FFCC00 100%);
+  color:#14BD6B  ;
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-
+#report p{margin-top: 10px;}
+#sunnry span{color: #FFCC00;}
+  
 
 
 @layer utilities {

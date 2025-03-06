@@ -2,15 +2,15 @@
 
 import React, { useState } from "react";
 import VitalsInput from "./components/VitalsInput";
-import Report from "./components/Report";
 import MealRecommendation from "./components/MealRecommendation";
 import "./globals.css";
+import Sunnry from "./components/Sunnry";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [height, setHeight] = useState(150);
   const [weight, setWeight] = useState(70);
-  const [dob, setDob] = useState("2000-01-01");
+  const [dob, setDob] = useState("");
   const [gender, setGender] = useState(1);
   const [activity, setActivity] = useState(1);
   const [goal, setGoal] = useState("");
@@ -34,15 +34,19 @@ export default function Home() {
     setBmi(bmiValue);
     setBmr(bmrValue);
     setTdee(tdeeValue);
+    setDob(`${age} years`);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-beige-100 p-6">
-      {/* Parent container: Flexbox layout */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
-        
+    <>
+    
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-beige-100 ">
+      {/* Parent container: Flexbox layout */} <h2 className="text-lg font-bold mb-4 max-w-sm text-center pt-4 text-gray-700">Sari Vitals</h2>
+      <div className=" flex flex-col md:flex-row  items-center  pl-8 pr-8 gap-4">
+    
         {/* Left Container (VitalsInput) */}
-        <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
+        <div className="flex-1 bg-white p-8 rounded-3xl bg-white bg-opacity-30  shadow-md  ">
+        
           <VitalsInput 
             name={name} setName={setName} 
             height={height} setHeight={setHeight} 
@@ -55,20 +59,24 @@ export default function Home() {
           />
         </div>
 
-        {/* Right Container (Splitting into two sections) */}
-        <div className="flex-1 flex flex-col gap-6">
+        {/* Right Container (Splitting into tgap-4wo sections) */}
+        <div className="rounded-3xl bg-white bg-opacity-30  shadow-md  p-4">
+        <h2 className="text-lg font-bold mb-4 text-center text-gray-700 ">Your Report & Resolution</h2>
+
+
           {/* Report Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md flex-1">
-            <Report name={name} dob={dob} bmi={bmi} bmr={bmr} tdee={tdee} weight={weight} goal={goal} />
-          </div>
-
+        
+            <Sunnry name={name} dob={dob} bmi={bmi} bmr={bmr} tdee={tdee} weight={weight} goal={goal} />
+        
+            
           {/* Meal Recommendation Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md flex-1">
+        
             <MealRecommendation  />
-          </div>
+          
         </div>
-
+      
       </div>
-    </div>
+      </div>
+      </>
   );
 }
