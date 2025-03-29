@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Patrick_Hand } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const patrickHand = Patrick_Hand({
+  weight: "400", // You can specify the weight, here it is 400 (regular)
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-patrick-hand", // Custom variable to use across the app
+});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={patrickHand.className}>{children}</body>
     </html>
   );
 }

@@ -13,7 +13,7 @@ export default function VitalsInput({
   return (
     <>
       <h2 className="text-sm  font-bold mb-4">Know Your Vitals in 2 minutes!</h2>
-    <div className="max-w-sm  bg-white p-6 bg-opacity-40 rounded-lg shadow-xl border border-gray-200 ">
+    <div className="max-w-sm  bg-white p-4 bg-opacity-20 rounded-lg   ">
     
 
       {/* Name Input */}
@@ -33,7 +33,12 @@ export default function VitalsInput({
         min="100" max="250"
         value={height}
         onChange={(e) => setHeight(e.target.value)}
-        className="w-full accent-green-500"
+        className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer"
+          style={{
+            WebkitAppearance: "none",
+            MozAppearance: "none",
+            outline: "none",
+          }}
       />
 
       {/* Weight Input */}
@@ -43,7 +48,12 @@ export default function VitalsInput({
         min="30" max="200"
         value={weight}
         onChange={(e) => setWeight(e.target.value)}
-        className="w-full accent-green-500"
+        className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer"
+          style={{
+            WebkitAppearance: "none",
+            MozAppearance: "none",
+            outline: "none",
+          }}
       />
 
       {/* DOB Input (Date Picker) */}
@@ -62,7 +72,12 @@ export default function VitalsInput({
         min="1" max="3"
         value={gender}
         onChange={(e) => setGender(e.target.value)}
-        className="w-full accent-green-500"
+        className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer"
+          style={{
+            WebkitAppearance: "none",
+            MozAppearance: "none",
+            outline: "none",
+          }}
       />
       <p>{gender === "1" ? "Male" : gender === "2" ? "Female" : "Other"}</p>
 
@@ -73,7 +88,12 @@ export default function VitalsInput({
         min="1" max="3"
         value={activity}
         onChange={(e) => setActivity(e.target.value)}
-        className="w-full accent-green-500"
+        className="w-full h-2 bg-black rounded-lg appearance-none cursor-pointer"
+          style={{
+            WebkitAppearance: "none",
+            MozAppearance: "none",
+            outline: "none",
+          }}
       />
       <p>{activity === "1" ? "Low" : activity === "2" ? "Moderate" : "High"}</p>
 

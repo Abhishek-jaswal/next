@@ -41,11 +41,10 @@ export default function Home() {
     <>
     
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-beige-100 ">
-      {/* Parent container: Flexbox layout */} <h2 className="text-lg font-bold mb-4 max-w-sm text-center pt-4 text-gray-700">Sari Vitals</h2>
       <div className=" flex flex-col md:flex-row  items-center  pl-8 pr-8 gap-4">
     
         {/* Left Container (VitalsInput) */}
-        <div className="flex-1 bg-white p-8 rounded-3xl bg-white bg-opacity-30  shadow-md  ">
+        <div className="flex-1 bg-white rounded-3xl bg-white bg-opacity-20    ">
         
           <VitalsInput 
             name={name} setName={setName} 
@@ -60,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* Right Container (Splitting into tgap-4wo sections) */}
-        <div className="rounded-3xl bg-white bg-opacity-30  shadow-md  p-4">
+        <div className="rounded-3xl bg-white bg-opacity-20    p-4">
         <h2 className="text-lg font-bold mb-4 text-center text-gray-700 ">Your Report & Resolution</h2>
 
 

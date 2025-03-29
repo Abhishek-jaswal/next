@@ -2,8 +2,8 @@ import React from "react";
 
 export default function MealRecommendation() {
   return (
-    <div className="flex flex-col md:flex-row gap-4 mt-4 ">
-    <div className="bg-white p-4 bg-opacity-40  rounded-lg shadow-xl border border-gray-200  " >
+    <div className="flex flex-col md:flex-row gap-4 ">
+    <div className="bg-white  bg-opacity-20  rounded-lg    " >
       <h2 className="text-lg font-bold ">Have No Time to Prepare Food?</h2>
       <p className="text-sm text-gray-600 ">Try Sari Food from MountainEat Farms</p>
 
@@ -15,11 +15,11 @@ export default function MealRecommendation() {
         <MealCard title="Sari Energy Boost" calories="250" />
       </div>
     </div>
-    <div className="bg-white p-2 bg-opacity-40 rounded-lg shadow-xl border border-gray-200  max-w-xs" >
+    <div className="bg-white p-2 bg-opacity-20 rounded-lg    max-w-xl" >
     <img src="/Images/training.png" alt="food" width={80} height={100} className="place-self-center" />
-      <h2 className=" font-bold mt-4">Sari is your trusted family member, Because a healthy family is Heaven, and Sari keeps it that way.</h2>
+      <h2 className=" font-bold mt-4">Sari is your trusted family member, Because <br></br>a healthy family is Heaven,and Sari keeps <br></br> it that way.</h2>
      
-      <h1 className="text-lg font-bold mt-10">
+      <h1 className="text-lg font-bold mt-4">
         --MountainKid
       </h1>
      

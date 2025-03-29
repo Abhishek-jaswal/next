@@ -12,9 +12,9 @@ export default function FitnessTimeline() {
   ];
 
   return (
-    <div className="flex flex-col items-center p-4 md:flex-row md:justify-between  mx-auto bg-white rounded-lg shadow-md space-y-6 md:space-y-0 bg-opacity-40 ">
+    <div className="flex flex-col items-center md:flex-row md:justify-between  mx-auto bg-white rounded-lg  space-y-8 md:space-y-0 bg-opacity-20 ">
       {/* Left Side: Tips and Activities */}
-      <div className="space-y-6   max-w-7xl">
+      <div className="space-y-8   max-w-7xl">
         <div className="flex items-center space-x-3">
           <img src="/Images/training.png" alt="Water intake" className="w-12 h-12" />
           <p className= "text-gray-700"><b></b><span className="text-blue-700">Take 3ltr water intake a day</span><br />Learn how to drink water in 30 sec</p>
@@ -33,15 +33,21 @@ export default function FitnessTimeline() {
 
       {/* Center: Vertical Progress Tracker */}
       <div className="relative flex flex-col items-center">
-        <div className="w-1 bg-gray-300 h-10 rounded-md absolute" />
+       
         <input
           type="range"
           min="1"
           max="3"
           value={progress}
           onChange={(e) => setProgress(Number(e.target.value))}
-          className="w-full accent-green-500   h-60 rotate-180 z-4 cursor-pointer"
-          style={{ writingMode: 'vertical-lr' }}
+          className="w-2 h-1/3 bg-black rounded-lg appearance-none cursor-pointer"
+          style={{
+            WebkitAppearance: "none",
+            MozAppearance: "none",
+            outline: "none",
+             writingMode: 'vertical-lr'
+          }}
+         
         />
       </div>
 

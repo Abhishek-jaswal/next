@@ -6,9 +6,9 @@ import FitnessTimeline from "./FitnessTimeline";
 export default function Sunnry({ name, dob, bmi, bmr, tdee, weight, goal }) {
   return (
    <div className = "flex flex-col md:flex-row gap-2" >
-    <div className="bg-white p-6 rounded-lg shadow-lg w-50 max-w-xs max-w-sm bg-opacity-40 " id="sunnry">
-    <label className="flex mb-1">
-      <img src="/Images/training.png" alt="nice" className="h-24 w-24"/>
+    <div className="bg-white p-6 rounded-lg  w-50 max-w-xs max-w-sm bg-opacity-40 " id="sunnry">
+    <label className="flex mb-1   place-self-center">
+      <img src="/Images/training.png" alt="nice" className="h-16 w-16"/>
       <label className="mt-4 ml-2 gap-2"> {name}<br></br>{dob}</label>
       </label>
         <>
